@@ -1,0 +1,44 @@
+import styled from "styled-components";
+import { type ButtonProps } from "./button.types";
+import { Colors } from "../../global/colors";
+
+export const Button = styled.button<ButtonProps>`
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: ${(p) => (p.size ? p.size + "px" : "14px")};
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 250ms;
+  width: ${(p) => (p.width ? p.width + "px" : "auto")};
+
+  color: ${(p) => (p.variant === "isEmpty" ? Colors.primary : "white")};
+
+  background-color: ${(p) =>
+    p.variant === "isPrimary"
+      ? Colors.primary
+      : p.variant === "isEmpty"
+        ? "transparent"
+        : Colors.red};
+
+  border: 1px solid
+    ${(p) => (p.variant === "isEmpty" ? Colors.primary : "transparent")};
+
+  &:hover {
+    background-color: ${(p) =>
+      p.variant === "isPrimary"
+        ? Colors.primaryHover
+        : p.variant === "isEmpty"
+          ? Colors.primary
+          : Colors.redHover};
+    color: ${(p) => (p.variant === "isEmpty" ? "white" : "white")};
+  }
+
+  &:disabled {
+    background-color: ${Colors.whiteGrey};
+    cursor: not-allowed;
+  }
+`;
