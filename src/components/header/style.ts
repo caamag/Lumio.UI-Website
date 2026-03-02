@@ -15,6 +15,10 @@ export const Header = styled.header`
   left: 0;
   right: 0;
   z-index: 1000;
+
+  @media screen and (max-width: 500px) {
+    justify-content: center;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -44,5 +48,9 @@ export const Nav = styled.nav`
     &:hover {
       color: #5b4dac;
     }
+  }
+
+  @media screen and (max-width: 500px) {
+    display: none;
   }
 `;

@@ -6,6 +6,10 @@ export const HomeContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 120px;
+
+  @media screen and (max-width: 500px) {
+    padding-top: 40px;
+  }
 `;
 
 export const HomeSection = styled.section<{ bgColor?: string }>`
@@ -20,6 +24,17 @@ export const HomeSection = styled.section<{ bgColor?: string }>`
 
   img {
     width: 50%;
+  }
+
+  @media screen and (max-width: 500px) {
+    justify-content: center;
+    gap: 20px;
+
+    img {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
   }
 `;
 
@@ -36,6 +51,11 @@ export const Title = styled.h1`
   span {
     color: #bebebe;
   }
+
+  @media screen and (max-width: 500px) {
+    font-size: 32px;
+    text-align: center;
+  }
 `;
 
 export const Description = styled.p`
@@ -45,11 +65,22 @@ export const Description = styled.p`
   font-weight: 500;
   line-height: 25px;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+  }
 `;
 
 export const BtnContainer = styled.div`
   display: flex;
   gap: 15px;
+
+  @media screen and (max-width: 500px) {
+    justify-content: center;
+    margin-top: 20px;
+  }
 `;
 
 export const Subtitle = styled.h2`
@@ -89,6 +120,12 @@ export const CodeBox = styled.div`
     white-space: pre-wrap;
     word-break: break-word;
   }
+
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    padding: 10px 20px;
+    margin-top: 0px;
+  }
 `;
 
 export const CopyCodeContainer = styled.p<{ isCopied?: boolean }>`
@@ -115,6 +152,10 @@ export const CopyCodeContainer = styled.p<{ isCopied?: boolean }>`
     cursor: pointer;
     color: ${Colors.primary};
   }
+
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
+  }
 `;
 
 export const OrText = styled.p`
@@ -122,4 +163,8 @@ export const OrText = styled.p`
   width: 100%;
   font-size: 18px;
   color: ${Colors.primary};
+
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
+  }
 `;
