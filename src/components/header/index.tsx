@@ -11,12 +11,11 @@ const Header = () => {
       </_.LogoContainer>
 
       <_.Nav>
-        <a href="#installation">Instalação</a>
         <a href="https://lumio-ui.vercel.app/?path=/docs/components-button--docs">
           Storybook
         </a>
         <a href="https://github.com/caamag/Lumio.UI">Github</a>
-        <a href="#">npm</a>
+        <a href="https://www.npmjs.com/package/@cainho_dev/lumio-ui">npm</a>
       </_.Nav>
     </_.Header>
   );
