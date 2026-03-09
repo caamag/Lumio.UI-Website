@@ -98,11 +98,49 @@ const Home = () => {
             <code>
               {`import { Button } from "@cainho_dev/lumio-ui";
 
-export function Example() {
+const ExamplePage = () => {
   return (
     <Button variant="isPrimary">
       Clique aqui
     </Button>
+  );
+}`}
+            </code>
+          </pre>
+        </_.CodeBox>
+      </_.HomeSection>
+
+      <_.HomeSection>
+        <_.Subtitle>Definição de cores globais</_.Subtitle>
+        <_.Description
+          style={{ textAlign: "center", width: "100%", marginTop: "0px" }}
+        >
+          Lumio UI possui um sistema de tema que permite personalizar cores
+          globais da biblioteca. Para isso, basta envolver sua aplicação com o
+          ThemeProvider. Aqui está um exemplo de como definir as cores globais
+          usando o ThemeProvider:
+        </_.Description>
+        <_.CodeBox style={{ maxWidth: "1200px", padding: "0px" }}>
+          <pre>
+            <code>
+              {`
+import { ThemeProvider } from "@cainho_dev/lumio-ui";
+
+const App = () => {
+  return (
+    <ThemeProvider
+      theme={{
+        colors: {
+          primary: "your-custom-primary-color",
+          primaryHover: "your-custom-primary-hover-color",
+          red: "your-custom-red-color",
+          whiteGrey: "your-custom-white-grey-color",
+          link: "your-custom-link-color",
+        }
+      }}
+    >
+      {/* sua aplicação */}
+    </ThemeProvider>
   );
 }`}
             </code>
