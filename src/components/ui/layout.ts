@@ -14,6 +14,9 @@ export const Container = styled.div`
 
 export const Section = styled.section`
   position: relative;
+  /* evita que animações laterais (Reveal from="right") e brilhos vazem da tela */
+  overflow-x: hidden;
+  overflow-x: clip;
   padding: 120px 0;
 
   @media (max-width: 768px) {

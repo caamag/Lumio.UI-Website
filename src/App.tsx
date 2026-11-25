@@ -10,6 +10,19 @@ const GlobalStyle = createGlobalStyle`
     border: none;
   }
 
+  /*
+   * Em alguns navegadores mobile (iOS Safari, Android WebView) o
+   * overflow-x: hidden só no body não impede o arraste lateral. "clip"
+   * corta o excesso sem criar contêiner de rolagem (não quebra sticky);
+   * "hidden" fica como fallback para navegadores antigos.
+   */
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-x: clip;
+  }
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 88px;
@@ -22,7 +35,6 @@ const GlobalStyle = createGlobalStyle`
     color: ${Colors.text};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
     line-height: 1.5;
   }
 
